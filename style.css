@@ -1,0 +1,131 @@
+/* Background */
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #0d0d0d;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Card Design */
+.card {
+    background: #1f2937;
+    width: 60%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+/* Headings */
+h2 {
+    color: #4CAF50;
+}
+
+/* List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #374151;
+    margin: 12px 0;
+    padding: 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* Hover */
+li:hover {
+    background: #4CAF50;
+    transform: scale(1.05);
+}
+
+/* Buttons */
+button {
+    background: #4CAF50;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* Inputs */
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+/* Menu Links */
+.menu a {
+    display: block;
+    margin: 15px auto;
+    padding: 15px;
+    width: 60%;
+    background: #374151;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* Hover */
+.menu a:hover {
+    background: #4CAF50;
+    transform: scale(1.05);
+}
+/* Profile Image */
+/* Profile Image (Square Professional) */
+.profile-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;   /* 👈 rounded corners (professional look) */
+    margin: 15px 0;
+    transition: 0.4s;
+}
+
+/* Hover effect */
+.profile-img:hover {
+    transform: scale(1.05);
+}
+/* Social Links */
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* Instagram */
+.insta {
+    background: linear-gradient(to right, #e1306c, #fd1d1d);
+}
+
+/* LinkedIn */
+.linkedin {
+    background: #0077b5;
+}
+
+/* Hover */
+.social-links a:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}

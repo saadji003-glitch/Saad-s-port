@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f7f9;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: #222;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #4CAF50;
+    border-radius: 5px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background: linear-gradient(to right, #4CAF50, #2e7d32);
+    color: white;
+    padding: 30px;
+}
+
+/* Section */
+.section {
+    padding: 30px;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* About Special */
+.about-box {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+}
+
+/* Images */
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Skills */
+ul {
+    list-style: square;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Form */
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Header -->
+<header id="home">
+    <h1>Saad Khan</h1>
+    <p>Computer Science Student | Web Developer</p>
+</header>
+
+<!-- About Section -->
+<div class="section about-box" id="about">
+    <div class="card">
+
+        <h2>About Me</h2>
+
+        <div class="image-container">
+            <img id="myPhoto" src="yourphoto1.jpg">
+            <img src="college.jpg">
+        </div>
+
+        <p>
+            I am a Computer Science student at <b>P. R. Pote Patil College of Engineering & Management, Amravati</b>.
+            I am passionate about web development and continuously learning new technologies.
+        </p>
+
+        <p>
+            My college provides a strong academic environment with focus on innovation,
+            practical learning, and skill development.
+        </p>
+
+        <p>
+            I am also interested in <b>Machine Learning</b>, which is a field of Artificial Intelligence
+            that allows computers to learn from data and make smart decisions.
+            It is used in real-world applications like recommendations, automation, and image recognition.
+        </p>
+
+    </div>
+</div>
+
+<!-- Skills -->
+<div class="section" id="skills">
+    <div class="card">
+        <h2>Skills</h2>
+        <ul>
+            <li>C Programming</li>
+            <li>Java</li>
+            <li>HTML & CSS</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Projects -->
+<div class="section" id="projects">
+    <div class="card">
+        <h2>Projects</h2>
+        <table>
+            <tr>
+                <th>Project Name</th>
+                <th>Technology</th>
+            </tr>
+            <tr>
+                <td>Unit Converter</td>
+                <td>C Language</td>
+            </tr>
+            <tr>
+                <td>Health Tracker</td>
+                <td>HTML, CSS</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Contact -->
+<div class="section" id="contact">
+    <div class="card">
+        <h2>Contact Me</h2>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button onclick="submitForm()">Submit</button>
+        <p id="msg"></p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Saad Khan</p>
+</footer>
+
+<script>
+// Form validation
+function submitForm() {
+    var name = document.getElementById("name").value;
+
+    if (name == "") {
+        alert("Please enter your name");
+    } else {
+        document.getElementById("msg").innerText = "Message Sent Successfully!";
+    }
+}
+
+// Image slideshow
+var images = ["yourphoto1.jpg", "yourphoto2.jpg"];
+var i = 0;
+
+setInterval(function() {
+    i = (i + 1) % images.length;
+    document.getElementById("myPhoto").src = images[i];
+}, 3000);
+</script>
+
+</body>
+</html>
